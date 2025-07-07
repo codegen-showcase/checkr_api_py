@@ -8667,7 +8667,7 @@ paths:
           source: |-
             $ curl -X GET https://api.checkr.com/v1/webhooks \
                 -u 83ebeabdec09f6670863766f792ead24d61fe3f9:
-  '/webhooks/${id}':
+  '/webhooks/{id}':
     parameters:
       - name: id
         in: path
@@ -8875,7 +8875,7 @@ paths:
             $ curl -X DELETE
             https://api.checkr.com/v1/i9/worksites/8046067e32ad6b25a9078735  \
                    -U YOUR_SECRET_API_KEY:
-  '/facis_searches/${id}':
+  '/facis_searches/{id}':
     parameters:
       - name: id
         in: path
