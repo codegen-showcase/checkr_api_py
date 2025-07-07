@@ -1,0 +1,402 @@
+api: checkr-api
+languages:
+  java:
+    sdk_name: checkrapijava
+    group_id: com.yourorg
+  python:
+    sdk_name: checkr_api_py
+  typescript:
+    sdk_name: checkr_api_ts
+  rust:
+    sdk_name: checkr_api_rs
+    cli: false
+  go:
+    sdk_name: checkr_api_go
+  csharp:
+    sdk_name: CheckrApiCSharp
+servers:
+- url: https://api.checkr.com/v1
+  name: environment
+  default: true
+auths:
+- id: basic_auth
+  username_param: username
+  password_param: password
+default_module_structure: path
+modules:
+- path: account
+  operations:
+  - id: account
+    function_name: list
+- path: accounts
+  operations:
+  - id: createAccount
+    function_name: create
+- path: adverse_actions
+  operations:
+  - id: cancelAdverseAction
+    function_name: delete
+  - id: getAdverseAction
+    function_name: get
+- path: candidate_stories
+  operations:
+  - id: deleteCandidateStory
+    function_name: delete
+  - id: getCandidateStory
+    function_name: get
+- path: candidates
+  operations:
+  - id: createCandidate
+    function_name: create
+  - id: getCandidate
+    function_name: get
+  - id: listOfCandidates
+    function_name: list
+  - id: updateCandidate
+    function_name: update
+- path: candidates.continuous_checks
+  operations:
+  - id: createContinuousCheck
+    function_name: create
+  - id: listOfContinuousChecks
+    function_name: list
+- path: candidates.documents
+  operations:
+  - id: getCandidateDocuments
+    function_name: list
+  - id: uploadDocument
+    function_name: create
+- path: candidates.driver_licenses
+  operations:
+  - id: createDriverLicense
+    function_name: create
+  - id: deleteDriverLicense
+    function_name: delete
+  - id: getDriverLicense
+    function_name: get
+  - id: listOfDriverLicenses
+    function_name: list
+  - id: updateDriverLicense
+    function_name: update
+- path: candidates.employers
+  operations:
+  - id: createEmployer
+    function_name: create
+  - id: employerDelete
+    function_name: delete
+  - id: employersListByCandidate
+    function_name: list
+  - id: getEmployer
+    function_name: get
+- path: candidates.pii
+  operations:
+  - id: deleteCandidate
+    function_name: delete
+- path: candidates.postal_address
+  operations:
+  - id: createPostalAddress
+    function_name: create
+  - id: getCandidatePostalAddress
+    function_name: list
+- path: candidates.professional_licenses
+  operations:
+  - id: createProfessionalLicense
+    function_name: create
+  - id: deleteProfessionalLicenses
+    function_name: delete
+  - id: listOfProfessionalLicenses
+    function_name: list
+- path: candidates.schools
+  operations:
+  - id: createSchoolForCandidate
+    function_name: create
+  - id: getSchool
+    function_name: get
+  - id: schoolDelete
+    function_name: delete
+  - id: schoolsListByCandidate
+    function_name: list
+- path: candidates.ssn
+  operations:
+  - id: getCandidateSsn
+    function_name: list
+- path: continuous_checks
+  operations:
+  - id: cancelContinuousCheck
+    function_name: delete
+  - id: getContinuousCheck
+    function_name: get
+  - id: postContinuousCheck
+    function_name: create
+- path: counties
+  operations:
+  - id: getCounties
+    function_name: list
+- path: county_criminal_searches
+  operations:
+  - id: getCountyCriminalSearch
+    function_name: get
+- path: documents
+  operations:
+  - id: getDocument
+    function_name: get
+- path: drug_alcohol_clearinghouse_searches
+  operations:
+  - id: getDrugAlcoholClearinghouseSearches
+    function_name: get
+- path: education_verifications
+  operations:
+  - id: getEducationVerification
+    function_name: get
+- path: employment_verifications
+  operations:
+  - id: getEmploymentVerification
+    function_name: get
+- path: facis_searches
+  operations:
+  - id: getFacisSearch
+    function_name: get
+- path: federal_civil_district_searches
+  operations:
+  - id: getFederalDistrictCivilSearch
+    function_name: get
+- path: federal_civil_searches
+  operations:
+  - id: getFederalCivilSearch
+    function_name: get
+- path: federal_criminal_searches
+  operations:
+  - id: getFederalCriminalSearch
+    function_name: get
+- path: federal_district_criminal_searches
+  operations:
+  - id: getFederalDistrictCriminalSearch
+    function_name: get
+- path: geos
+  operations:
+  - id: createGeo
+    function_name: create
+  - id: deleteGeo
+    function_name: delete
+  - id: geosList
+    function_name: list
+  - id: getGeo
+    function_name: get
+  - id: updateGeo
+    function_name: update
+- path: global_watchlist_searches
+  operations:
+  - id: getGlobalWatchlistSearch
+    function_name: get
+- path: hierarchy
+  operations:
+  - id: getAccountHierarchy
+    function_name: list
+  - id: updateAccountHierarchy
+    function_name: create
+- path: hierarchy.nodes
+  operations:
+  - id: createAccountHierarchyNodes
+    function_name: create
+- path: hierarchy.status
+  operations:
+  - id: getAccountHierarchyStatus
+    function_name: list
+- path: i9.forms_i9
+  operations:
+  - id: createFormI9
+    function_name: create
+  - id: getFormI9
+    function_name: list
+  - id: getFormI9ID
+    function_name: get
+- path: i9.forms_i9.pdf
+  operations:
+  - id: getFormI9Pdf
+    function_name: list
+- path: i9.worksites
+  operations:
+  - id: deleteWorksites
+    function_name: delete
+  - id: getWorksites
+    function_name: get
+  - id: updateWorksites
+    function_name: update
+  - id: worksitesCreate
+    function_name: create
+  - id: worksitesList
+    function_name: list
+- path: international_adverse_media_searches
+  operations:
+  - id: getInternationalAdverseMediaSearch
+    function_name: get
+- path: international_criminal_searches
+  operations:
+  - id: getInternationalCriminalSearch
+    function_name: get
+- path: international_education_verifications
+  operations:
+  - id: getInternationalEducationVerificaiton
+    function_name: get
+- path: international_employment_verifications
+  operations:
+  - id: getInternationalEmploymentVerification
+    function_name: get
+- path: international_global_watchlist_searches
+  operations:
+  - id: getInternationalGlobalWatchlistSearch
+    function_name: get
+- path: international_identity_document_validation
+  operations:
+  - id: getInternationalIdentityDocumentValidation
+    function_name: get
+- path: international_motor_vehicle_reports
+  operations:
+  - id: getInternationalMotorVehicleReport
+    function_name: get
+- path: invitations
+  operations:
+  - id: cancelInvitation
+    function_name: delete
+  - id: createInvitation
+    function_name: create
+  - id: getInvitation
+    function_name: get
+  - id: listOfInvitations
+    function_name: list
+- path: motor_vehicle_reports
+  operations:
+  - id: getMotorVehicleReport
+    function_name: get
+- path: national_criminal_searches
+  operations:
+  - id: getNationalCriminalSearch
+    function_name: get
+- path: nodes
+  operations:
+  - id: deleteNode
+    function_name: delete
+  - id: getNode
+    function_name: get
+  - id: nodesList
+    function_name: list
+  - id: updateNode
+    function_name: patch
+- path: packages
+  operations:
+  - id: deletePackage
+    function_name: delete
+  - id: getPackage
+    function_name: get
+  - id: packagesList
+    function_name: list
+- path: personal_reference_verifications
+  operations:
+  - id: getPersonalReferenceVerification
+    function_name: get
+- path: professional_license_verifications
+  operations:
+  - id: getProfessionalLicenseVerification
+    function_name: get
+- path: professional_reference_verifications
+  operations:
+  - id: getProfessionalReferenceVerification
+    function_name: get
+- path: programs
+  operations:
+  - id: getProgram
+    function_name: get
+  - id: programsList
+    function_name: list
+- path: reports
+  operations:
+  - id: createReport
+    function_name: create
+  - id: getReport
+    function_name: get
+  - id: updateReport
+    function_name: update
+- path: reports.addresses
+  operations:
+  - id: addressesListByReport
+    function_name: list
+- path: reports.adverse_actions
+  operations:
+  - id: createAdverseAction
+    function_name: create
+- path: reports.adverse_items
+  operations:
+  - id: adverseItemsByReport
+    function_name: list
+- path: reports.assessments
+  operations:
+  - id: assessmentsByReport
+    function_name: list
+- path: reports.candidate_stories
+  operations:
+  - id: createCandidateStory
+    function_name: create
+- path: reports.complete
+  operations:
+  - id: completeReport
+    function_name: create
+- path: reports.eta
+  operations:
+  - id: requestReportETA
+    function_name: list
+- path: reports.tags
+  operations:
+  - id: addTagToReport
+    function_name: create
+  - id: deleteTagFromReport
+    function_name: delete
+  - id: getTagsForReport
+    function_name: list
+  - id: updateTagsForReport
+    function_name: update
+- path: reports.verifications
+  operations:
+  - id: verificationsListByReport
+    function_name: list
+- path: sex_offender_searches
+  operations:
+  - id: getSexOffenderSearch
+    function_name: get
+- path: ssn_traces
+  operations:
+  - id: getSsnTrace
+    function_name: get
+- path: state_criminal_searches
+  operations:
+  - id: getStateCriminalSearch
+    function_name: get
+- path: subscriptions
+  operations:
+  - id: cancelSubscription
+    function_name: delete
+  - id: createSubscription
+    function_name: create
+  - id: getSubscription
+    function_name: get
+  - id: getSubscriptions
+    function_name: list
+  - id: updateSubscription
+    function_name: update
+- path: users
+  operations:
+  - id: usersList
+    function_name: list
+- path: verifications
+  operations:
+  - id: getVerification
+    function_name: get
+- path: webhooks
+  operations:
+  - id: createWebhook
+    function_name: create
+  - id: deleteWebhook
+    function_name: delete
+  - id: getWebhook
+    function_name: get
+  - id: webhooksList
+    function_name: list
