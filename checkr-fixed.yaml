@@ -6860,7 +6860,7 @@ paths:
             https://api.checkr.com/v1/international_education_verifications/41007cffefb435cf7d701f75d8b86e
             \
                 -u 83ebeabdec09f6670863766f792ead24d61fe3f9:
-  '/international_employment_verifications{id}':
+  '/international_employment_verifications/{id}':
     parameters:
       - name: id
         in: path
