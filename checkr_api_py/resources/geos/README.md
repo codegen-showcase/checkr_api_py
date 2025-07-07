@@ -1,47 +1,4 @@
 
-### Delete an existing Geo <a name="delete"></a>
-
-Deletes an existing Geo.
-
-
-**API Endpoint**: `DELETE /geos/{id}`
-
-#### Parameters
-
-| Parameter | Required | Description | Example |
-|-----------|:--------:|-------------|--------|
-| `id` | ✓ | ID of the Geo. | `"string"` |
-
-#### Synchronous Client
-
-```python
-from checkr_api_py import Client
-from os import getenv
-
-client = Client(username=getenv("API_USERNAME"), password=getenv("API_PASSWORD"))
-res = client.geos.delete(id="string")
-
-```
-
-#### Asynchronous Client
-
-```python
-from checkr_api_py import AsyncClient
-from os import getenv
-
-client = AsyncClient(username=getenv("API_USERNAME"), password=getenv("API_PASSWORD"))
-res = await client.geos.delete(id="string")
-
-```
-
-#### Response
-
-##### Type
-[Geo](/checkr_api_py/types/models/geo.py)
-
-##### Example
-`{"city": "San Francisco", "created_at": "2015-01-18T12:34:00Z", "id": "e44aa283528e6fde7d542194", "name": "SF CA", "state": "CA", "uri": "/v1/geos/e44aa283528e6fde7d542194"}`
-
 ### List existing Geos <a name="list"></a>
 
 Returns a list of existing Geos with the input `name` or `state`.

@@ -165,7 +165,6 @@ class Client:
         self.candidate_stories = CandidateStoriesClient(base_client=self._base_client)
         self.candidates = CandidatesClient(base_client=self._base_client)
         self.continuous_checks = ContinuousChecksClient(base_client=self._base_client)
-        self.geos = GeosClient(base_client=self._base_client)
         self.i9 = I9Client(base_client=self._base_client)
         self.invitations = InvitationsClient(base_client=self._base_client)
         self.nodes = NodesClient(base_client=self._base_client)
@@ -201,6 +200,7 @@ class Client:
         self.federal_district_criminal_searches = FederalDistrictCriminalSearchesClient(
             base_client=self._base_client
         )
+        self.geos = GeosClient(base_client=self._base_client)
         self.global_watchlist_searches = GlobalWatchlistSearchesClient(
             base_client=self._base_client
         )
@@ -283,7 +283,6 @@ class AsyncClient:
         self.continuous_checks = AsyncContinuousChecksClient(
             base_client=self._base_client
         )
-        self.geos = AsyncGeosClient(base_client=self._base_client)
         self.i9 = AsyncI9Client(base_client=self._base_client)
         self.invitations = AsyncInvitationsClient(base_client=self._base_client)
         self.nodes = AsyncNodesClient(base_client=self._base_client)
@@ -319,6 +318,7 @@ class AsyncClient:
         self.federal_district_criminal_searches = (
             AsyncFederalDistrictCriminalSearchesClient(base_client=self._base_client)
         )
+        self.geos = AsyncGeosClient(base_client=self._base_client)
         self.global_watchlist_searches = AsyncGlobalWatchlistSearchesClient(
             base_client=self._base_client
         )

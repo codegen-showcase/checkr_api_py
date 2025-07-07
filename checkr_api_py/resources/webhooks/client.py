@@ -23,7 +23,7 @@ class WebhooksClient:
 
         Deletes the existing Webhook corresponding to the input ID.
 
-        DELETE /webhooks/${id}
+        DELETE /webhooks/{id}
 
         Args:
             id: ID of the Webhook.
@@ -43,7 +43,7 @@ class WebhooksClient:
         """
         return self._base_client.request(
             method="DELETE",
-            path=f"/webhooks/${id}",
+            path=f"/webhooks/{id}",
             auth_names=["basic_auth"],
             cast_to=models.WebhookDelete,
             request_options=request_options or default_request_options(),
@@ -91,7 +91,7 @@ class WebhooksClient:
 
         Returns the existing Webhook corresponding to the input ID.
 
-        GET /webhooks/${id}
+        GET /webhooks/{id}
 
         Args:
             id: ID of the Webhook.
@@ -111,7 +111,7 @@ class WebhooksClient:
         """
         return self._base_client.request(
             method="GET",
-            path=f"/webhooks/${id}",
+            path=f"/webhooks/{id}",
             auth_names=["basic_auth"],
             cast_to=models.Webhook,
             request_options=request_options or default_request_options(),
@@ -187,7 +187,7 @@ class AsyncWebhooksClient:
 
         Deletes the existing Webhook corresponding to the input ID.
 
-        DELETE /webhooks/${id}
+        DELETE /webhooks/{id}
 
         Args:
             id: ID of the Webhook.
@@ -207,7 +207,7 @@ class AsyncWebhooksClient:
         """
         return await self._base_client.request(
             method="DELETE",
-            path=f"/webhooks/${id}",
+            path=f"/webhooks/{id}",
             auth_names=["basic_auth"],
             cast_to=models.WebhookDelete,
             request_options=request_options or default_request_options(),
@@ -255,7 +255,7 @@ class AsyncWebhooksClient:
 
         Returns the existing Webhook corresponding to the input ID.
 
-        GET /webhooks/${id}
+        GET /webhooks/{id}
 
         Args:
             id: ID of the Webhook.
@@ -275,7 +275,7 @@ class AsyncWebhooksClient:
         """
         return await self._base_client.request(
             method="GET",
-            path=f"/webhooks/${id}",
+            path=f"/webhooks/{id}",
             auth_names=["basic_auth"],
             cast_to=models.Webhook,
             request_options=request_options or default_request_options(),

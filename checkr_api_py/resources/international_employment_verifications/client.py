@@ -22,7 +22,7 @@ class InternationalEmploymentVerificationsClient:
         Returns an existing International Employment Verification with the input ID.
 
 
-        GET /international_employment_verifications{id}
+        GET /international_employment_verifications/{id}
 
         Args:
             id: ID of the International Employment Verification to retrieve.
@@ -42,7 +42,7 @@ class InternationalEmploymentVerificationsClient:
         """
         return self._base_client.request(
             method="GET",
-            path=f"/international_employment_verifications{id}",
+            path=f"/international_employment_verifications/{id}",
             auth_names=["basic_auth"],
             cast_to=models.InternationalEmploymentVerification,
             request_options=request_options or default_request_options(),
@@ -62,7 +62,7 @@ class AsyncInternationalEmploymentVerificationsClient:
         Returns an existing International Employment Verification with the input ID.
 
 
-        GET /international_employment_verifications{id}
+        GET /international_employment_verifications/{id}
 
         Args:
             id: ID of the International Employment Verification to retrieve.
@@ -82,7 +82,7 @@ class AsyncInternationalEmploymentVerificationsClient:
         """
         return await self._base_client.request(
             method="GET",
-            path=f"/international_employment_verifications{id}",
+            path=f"/international_employment_verifications/{id}",
             auth_names=["basic_auth"],
             cast_to=models.InternationalEmploymentVerification,
             request_options=request_options or default_request_options(),

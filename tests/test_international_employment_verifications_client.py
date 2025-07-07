@@ -7,7 +7,7 @@ from checkr_api_py.types import models
 
 
 def test_get_200_success_all_params():
-    """Tests a GET request to the /international_employment_verifications{id} endpoint.
+    """Tests a GET request to the /international_employment_verifications/{id} endpoint.
 
     Operation: get
     Test Case ID: success_all_params
@@ -43,7 +43,7 @@ def test_get_200_success_all_params():
 
 @pytest.mark.asyncio
 async def test_await_get_200_success_all_params():
-    """Tests a GET request to the /international_employment_verifications{id} endpoint.
+    """Tests a GET request to the /international_employment_verifications/{id} endpoint.
 
     Operation: get
     Test Case ID: success_all_params

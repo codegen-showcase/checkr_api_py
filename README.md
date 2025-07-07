@@ -2207,7 +2207,6 @@ client = AsyncClient(username=getenv("API_USERNAME"), password=getenv("API_PASSW
 ### [geos](checkr_api_py/resources/geos/README.md)
 
 * [create](checkr_api_py/resources/geos/README.md#create) - Create a new Geo
-* [delete](checkr_api_py/resources/geos/README.md#delete) - Delete an existing Geo
 * [get](checkr_api_py/resources/geos/README.md#get) - Retrieve an existing Geo
 * [list](checkr_api_py/resources/geos/README.md#list) - List existing Geos
 * [update](checkr_api_py/resources/geos/README.md#update) - Update an existing Geo

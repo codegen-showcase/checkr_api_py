@@ -4,7 +4,7 @@
 Returns an existing FACIS Search with the input ID.
 
 
-**API Endpoint**: `GET /facis_searches/${id}`
+**API Endpoint**: `GET /facis_searches/{id}`
 
 #### Parameters
 

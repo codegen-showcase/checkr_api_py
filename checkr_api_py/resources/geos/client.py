@@ -17,41 +17,6 @@ class GeosClient:
     def __init__(self, *, base_client: SyncBaseClient):
         self._base_client = base_client
 
-    def delete(
-        self, *, id: str, request_options: typing.Optional[RequestOptions] = None
-    ) -> models.Geo:
-        """
-        Delete an existing Geo
-
-        Deletes an existing Geo.
-
-
-        DELETE /geos/{id}
-
-        Args:
-            id: ID of the Geo.
-            request_options: Additional options to customize the HTTP request
-
-        Returns:
-            Geo was successfully deleted
-
-        Raises:
-            ApiError: A custom exception class that provides additional context
-                for API errors, including the HTTP status code and response body.
-
-        Examples:
-        ```py
-        client.geos.delete(id="string")
-        ```
-        """
-        return self._base_client.request(
-            method="DELETE",
-            path=f"/geos/{id}",
-            auth_names=["basic_auth"],
-            cast_to=models.Geo,
-            request_options=request_options or default_request_options(),
-        )
-
     def list(
         self,
         *,
@@ -276,41 +241,6 @@ class GeosClient:
 class AsyncGeosClient:
     def __init__(self, *, base_client: AsyncBaseClient):
         self._base_client = base_client
-
-    async def delete(
-        self, *, id: str, request_options: typing.Optional[RequestOptions] = None
-    ) -> models.Geo:
-        """
-        Delete an existing Geo
-
-        Deletes an existing Geo.
-
-
-        DELETE /geos/{id}
-
-        Args:
-            id: ID of the Geo.
-            request_options: Additional options to customize the HTTP request
-
-        Returns:
-            Geo was successfully deleted
-
-        Raises:
-            ApiError: A custom exception class that provides additional context
-                for API errors, including the HTTP status code and response body.
-
-        Examples:
-        ```py
-        await client.geos.delete(id="string")
-        ```
-        """
-        return await self._base_client.request(
-            method="DELETE",
-            path=f"/geos/{id}",
-            auth_names=["basic_auth"],
-            cast_to=models.Geo,
-            request_options=request_options or default_request_options(),
-        )
 
     async def list(
         self,

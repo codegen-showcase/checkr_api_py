@@ -3,7 +3,7 @@
 
 Deletes the existing Webhook corresponding to the input ID.
 
-**API Endpoint**: `DELETE /webhooks/${id}`
+**API Endpoint**: `DELETE /webhooks/{id}`
 
 #### Parameters
 
@@ -82,7 +82,7 @@ res = await client.webhooks.list()
 
 Returns the existing Webhook corresponding to the input ID.
 
-**API Endpoint**: `GET /webhooks/${id}`
+**API Endpoint**: `GET /webhooks/{id}`
 
 #### Parameters
 

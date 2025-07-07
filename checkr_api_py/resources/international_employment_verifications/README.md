@@ -4,7 +4,7 @@
 Returns an existing International Employment Verification with the input ID.
 
 
-**API Endpoint**: `GET /international_employment_verifications{id}`
+**API Endpoint**: `GET /international_employment_verifications/{id}`
 
 #### Parameters
 

@@ -22,7 +22,7 @@ class FacisSearchesClient:
         Returns an existing FACIS Search with the input ID.
 
 
-        GET /facis_searches/${id}
+        GET /facis_searches/{id}
 
         Args:
             id: ID of the Facis Search to retrieve.
@@ -42,7 +42,7 @@ class FacisSearchesClient:
         """
         return self._base_client.request(
             method="GET",
-            path=f"/facis_searches/${id}",
+            path=f"/facis_searches/{id}",
             auth_names=["basic_auth"],
             cast_to=models.FacisSearch,
             request_options=request_options or default_request_options(),
@@ -62,7 +62,7 @@ class AsyncFacisSearchesClient:
         Returns an existing FACIS Search with the input ID.
 
 
-        GET /facis_searches/${id}
+        GET /facis_searches/{id}
 
         Args:
             id: ID of the Facis Search to retrieve.
@@ -82,7 +82,7 @@ class AsyncFacisSearchesClient:
         """
         return await self._base_client.request(
             method="GET",
-            path=f"/facis_searches/${id}",
+            path=f"/facis_searches/{id}",
             auth_names=["basic_auth"],
             cast_to=models.FacisSearch,
             request_options=request_options or default_request_options(),

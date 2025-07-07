@@ -78,7 +78,7 @@ async def test_await_create_201_success_all_params():
 
 
 def test_get_200_success_all_params():
-    """Tests a GET request to the /webhooks/${id} endpoint.
+    """Tests a GET request to the /webhooks/{id} endpoint.
 
     Operation: get
     Test Case ID: success_all_params
@@ -112,7 +112,7 @@ def test_get_200_success_all_params():
 
 @pytest.mark.asyncio
 async def test_await_get_200_success_all_params():
-    """Tests a GET request to the /webhooks/${id} endpoint.
+    """Tests a GET request to the /webhooks/{id} endpoint.
 
     Operation: get
     Test Case ID: success_all_params
@@ -212,7 +212,7 @@ async def test_await_list_200_success_all_params():
 
 
 def test_delete_200_success_all_params():
-    """Tests a DELETE request to the /webhooks/${id} endpoint.
+    """Tests a DELETE request to the /webhooks/{id} endpoint.
 
     Operation: delete
     Test Case ID: success_all_params
@@ -246,7 +246,7 @@ def test_delete_200_success_all_params():
 
 @pytest.mark.asyncio
 async def test_await_delete_200_success_all_params():
-    """Tests a DELETE request to the /webhooks/${id} endpoint.
+    """Tests a DELETE request to the /webhooks/{id} endpoint.
 
     Operation: delete
     Test Case ID: success_all_params

@@ -20,7 +20,7 @@ Lists existing Candidates with the input parameters.
 | `email` | ✗ | Returns candidates with the input email address. | `"string"` |
 | `full_name` | ✗ | Returns candidates with the input `full_name`. | `"string"` |
 | `geo_id` | ✗ | Returns candidates with the input `geo_id`. | `"string"` |
-| `metadata` | ✗ | Returns candidates matching the input key-values. Input keys will be matched exactly. Input values will be pre- and post-pended with wildcards. (For example: A query for 1234 will return results for \*1234\*.) | `{}` |
+| `metadata` | ✗ | Returns candidates matching the input key-values. Input keys will be matched exactly. Input values will be pre- and post-pended with wildcards. (For example: A query for 1234 will return results for *1234*.) | `{}` |
 | `page` | ✗ | Specifies the page number to retrieve. | `123.0` |
 | `per_page` | ✗ | Indicates how many records each page should contain. The default value is 25 records. | `123.0` |
 | `program_id` | ✗ | Returns candidates with the input `program_id`. | `"string"` |
