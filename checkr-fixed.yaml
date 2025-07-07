@@ -4764,7 +4764,7 @@ paths:
             Returns candidates matching the input key-values. Input keys will be
             matched exactly. Input values will be pre- and post-pended with
             wildcards. (For example: A query for 1234 will return results for
-            \*1234\*.)
+            *1234*.)
           schema:
             type: object
         - name: page
@@ -6343,32 +6343,6 @@ paths:
           source: >
             $ curl -X GET
             https://api.checkr.com/v1/geos/e44aa283528e6fde7d542194 \
-                -u 83ebeabdec09f6670863766f792ead24d61fe3f9:
-    delete:
-      tags:
-        - Geos
-      summary: Delete an existing Geo
-      description: |
-        Deletes an existing Geo.
-      operationId: deleteGeo
-      security:
-        - basic_auth: []
-      responses:
-        '204':
-          $ref: '#/components/responses/GeoDeleted'
-        '400':
-          $ref: '#/components/responses/BadRequestError'
-        '401':
-          $ref: '#/components/responses/UnauthorizedError'
-        '403':
-          $ref: '#/components/responses/ForbiddenError'
-        '409':
-          $ref: '#/components/responses/UsedGeoError'
-      x-codeSamples:
-        - lang: curl
-          source: >
-            $ curl -X DELETE
-            https://api.checkr.com/v1/geos/b719804dc15c655f8529a2f2 \
                 -u 83ebeabdec09f6670863766f792ead24d61fe3f9:
     post:
       tags:
